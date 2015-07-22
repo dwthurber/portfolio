@@ -515,7 +515,7 @@ ul.sub-menu {
 }
 
 .copyright-text{
-  margin-top: 70px;
+  margin-top: 30px;
   font-size: 16px;  
   padding-bottom: 15px;
 }
@@ -2721,4 +2721,22 @@ span.stButton_gradient,
   -webkit-box-shadow: 0 0 0 5px rgba(0,0,0,.1) inset;
   border-radius: 100%;
   margin: 10px 0;
+}
+.btn {
+    padding-bottom: 3px;
+}
+
+.btn:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+
+.btn:hover:after {
+	width: 100%;
+	background: #00aeef;
 }
