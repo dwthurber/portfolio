@@ -1000,6 +1000,12 @@ ul.elements li > i{
   margin-right: 10px;
 }
 
+ol.elements{
+  margin: 0;
+  padding: 0px 0px 0px 30px;
+}
+
+
 #company-information h1.margin-bottom{
   margin-bottom: 26px;
 }
@@ -2739,4 +2745,8 @@ span.stButton_gradient,
 .btn:hover:after {
 	width: 100%;
 	background: #00aeef;
+}
+
+.gslides {
+  min-height: 350px;
 }
