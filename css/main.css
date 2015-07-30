@@ -160,6 +160,7 @@
   }
 
 
+
 /*************************
 *******Header******
 **************************/
@@ -2379,7 +2380,7 @@ span.stButton_gradient,
   margin-bottom: 50px;
 }
 
-.btn-error:hover, .btn-error:focus  {
+.btn-error:focus  {
   background-color: #cc9b59;
   border-color:#cc9b59;
   color:#fff;
@@ -2471,7 +2472,7 @@ span.stButton_gradient,
   font-family: 'Open Sans', sans-serif;
 }
 
-.btn-error:hover, .btn-error:focus  {
+.btn-error:focus  {
   background-color: #4FCCCD;
   border-color:#4FCCCD;
   color:#fff;
