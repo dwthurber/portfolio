@@ -527,6 +527,7 @@ ul.sub-menu {
 
 .copyright-text p {
   margin-bottom: 0;
+  display: inline-block;
 }
 
 /*************************
@@ -2751,3 +2752,5 @@ span.stButton_gradient,
 .gslides {
   min-height: 350px;
 }
+
+
