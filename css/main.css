@@ -391,7 +391,6 @@ ul.sub-menu {
   background-image: url(../images/home/shattered_@2X.png);
   background-repeat: repeat-x;
   background-position: bottom;
-  background-size: contain;
 }
 
 #footer h1{
@@ -1005,6 +1004,7 @@ ul.elements li > i{
 ol.elements{
   margin: 0;
   padding: 0px 0px 0px 30px;
+  margin-bottom: 10px;
 }
 
 
