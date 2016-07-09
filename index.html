@@ -13,6 +13,17 @@ layout: default
         <li>Web Design</li>
     </ul>
 </nav>
+
+<div class="flex-container">
+    {% for project in site.projects %}<a href="#"><div class="card" data-name="{{ project.title }}">
+        <img src="{{ project.image_path }}"></img>
+        <h4 class="title">{{ project.title }}</h4>
+        <div class="description">
+            <p class="category">{% for tag in project.categories %}{{ tag }}{% endfor %}</p>
+            <p>{{ project.description }}</p>
+        </div>
+    </div></a>{% endfor %}
+</div>
 </div>
 <div class="gelber-right-top">
 <h3 class="center grey">Derek Thurber</h3>
