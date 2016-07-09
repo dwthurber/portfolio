@@ -1,0 +1,38 @@
+.navbar h1 {
+    margin-top: 0;
+}
+
+.center {
+    text-align: center;
+}
+
+.grey {
+    color: #666;
+}
+
+.small-margin {
+    margin: 5px;
+}
+
+.line-height-1 {
+    line-height: 1.2em;
+}
+
+.nav-horizontal {
+    margin: 10px 0;
+}
+
+.nav-horizontal ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-horizontal li {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+.nav-horizontal a {
+    padding: 5px 10px;
+}
