@@ -91,8 +91,8 @@ http://www.tipue.com/beaty
 .gelber-left
 {
      margin: 0 auto;
-     max-width: 700px;
-     padding: 30px 430px 30px 30px;    
+     max-width: 810px;
+     padding: 30px 360px 30px 30px;    
 }
 .gelber-right-top
 {
@@ -100,22 +100,22 @@ http://www.tipue.com/beaty
      top: 0;
      right: 0;
      box-sizing: border-box;
-     width: 400px;
-     height: 300px;
+     width: 330px;
+     height: 320px;
      background-color: #f9f9f9;
-     padding: 30px;
+     padding: 15px;
      z-index: 100;
 }
 .gelber-right-bottom
 {
      position: fixed;
-     top: 300px;
+     top: 320px;
      right: 0;
      box-sizing: border-box;
-     width: 400px;
+     width: 330px;
      height: 100%;
      background-color: #efefef;
-     padding: 30px;
+     padding: 15px;
      z-index: 100;
 }
 

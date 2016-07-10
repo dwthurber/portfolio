@@ -7,27 +7,35 @@ layout: default
 </a>
 <nav class="nav-horizontal">
     <ul>
-        <li>All</li>
-        <li>Graphic Design</li>
-        <li>ELearning Design</li>
-        <li>Web Design</li>
+        <li class="filter" data-filter="all">All</li>
+        <li class="filter" data-filter=".graphicdesign">Graphic Design</li>
+        <li class="filter" data-filter=".elearning">ELearning Design</li>
+        <li class="filter" data-filter=".webdesign">Web Design</li>
     </ul>
 </nav>
 
-<div class="flex-container">
-    {% for project in site.projects %}<a href="#"><div class="card" data-name="{{ project.title }}">
+<div class="flex-container" id="Container">
+    {% for project in site.projects %}{% for tag in project.categories %}<a href="{{ project.url }}" class="mix {{ tag | downcase | remove: ' ' }}"><div class="card" data-name="{{ project.title }}">
         <img src="{{ project.image_path }}"></img>
-        <h4 class="title">{{ project.title }}</h4>
         <div class="description">
-            <p class="category">{% for tag in project.categories %}{{ tag }}{% endfor %}</p>
-            <p>{{ project.description }}</p>
+            <h4>{{ project.title }}</h4>
         </div>
+        <p class="category">{{ tag }}</p>{% endfor %}
+        <p class="year">{{ project.year }}</p>
     </div></a>{% endfor %}
 </div>
 </div>
 <div class="gelber-right-top">
-<h3 class="center grey">Derek Thurber</h3>
-<h4 class="center small-margin line-height-1">Instructional Design and Technology Consultant</h4>
+<h2 class="center">Derek Thurber</h2>
+<img src="/img/derek-thurber.jpg" class="circle profile-pic">
+<h4 class="center grey">Instructional Design and Technology Consultant</h4>
+<ul class="nav-horizontal nav-pills">
+<!--<li><a href=""><i class="fa fa-facebook"></i></a></li>-->
+    <li><a href="https://github.com/dwthurber" target="_blank"><i class="fa fa-github"></i></a></li>
+    <li><a href="https://www.google.com/+DerekThurber" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+    <!--<li><a href=""><i class="fa fa-dribbble"></i></a></li>-->
+    <li><a href="https://www.linkedin.com/in/derekthurber" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+</ul>
 </div>
 <div class="gelber-right-bottom">
 <p>right bottom</p>
