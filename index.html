@@ -1,42 +1,57 @@
 ---
 layout: default
 ---
-<div class="gelber-left">
-<a class="navbar" href="../">
-    <h1><img src="logo.png" alt="logo"></h1>
-</a>
-<nav class="nav-horizontal">
-    <ul>
-        <li class="filter" data-filter="all">All</li>
-        <li class="filter" data-filter=".graphicdesign">Graphic Design</li>
-        <li class="filter" data-filter=".elearning">ELearning Design</li>
-        <li class="filter" data-filter=".webdesign">Web Design</li>
-    </ul>
-</nav>
 
-<div class="flex-container" id="Container">
-    {% for project in site.projects %}{% for tag in project.categories %}<a href="{{ project.url }}" class="mix {{ tag | downcase | remove: ' ' }}"><div class="card" data-name="{{ project.title }}">
-        <img src="{{ project.image_path }}"></img>
-        <div class="description">
-            <h4>{{ project.title }}</h4>
-        </div>
-        <p class="category">{{ tag }}</p>{% endfor %}
-        <p class="year">{{ project.year }}</p>
-    </div></a>{% endfor %}
-</div>
-</div>
-<div class="gelber-right-top">
-<h2 class="center">Derek Thurber</h2>
-<img src="/img/derek-thurber.jpg" class="circle profile-pic">
-<h4 class="center grey">Instructional Design and Technology Consultant</h4>
-<ul class="nav-horizontal nav-pills">
-<!--<li><a href=""><i class="fa fa-facebook"></i></a></li>-->
-    <li><a href="https://github.com/dwthurber" target="_blank"><i class="fa fa-github"></i></a></li>
-    <li><a href="https://www.google.com/+DerekThurber" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-    <!--<li><a href=""><i class="fa fa-dribbble"></i></a></li>-->
-    <li><a href="https://www.linkedin.com/in/derekthurber" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-</ul>
-</div>
-<div class="gelber-right-bottom">
-<p>right bottom</p>
-</div>
+	<div class="cd-intro-block">
+		<div class="content-wrapper">
+			<img src="img/derek-thurber.jpg" class="circle">
+			<h1>Derek Thurber</h1>
+			<h2>Instructional Designer // Graphic Designer // Front End Web Developer</h2>
+			<ul class="horizontal-nav">
+				<li><a href="#0" target="_blank" class="nav-pill"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+				<li><a href="#0" target="_blank" class="nav-pill"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+				<li><a href="#0" target="_blank" class="nav-pill"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+			</ul>
+			<a href="#0" class='cd-btn' data-action="show-projects">Show projects</a>
+		</div>
+	</div> <!-- .cd-intro-block -->
+
+	<div class="cd-projects-wrapper">
+		<ul class="cd-slider">
+			{% for project in site.projects %}
+			<li {% if forloop.first == true %}class="current"{% else %}{% endif %}>
+				<a href="#/{{ project.title | downcase | replace: ' ', '-' }}" class="cd-hover" ng-click="pickProject('{{ project.title | downcase | replace: ' ', '-' }}')">
+					<img src="{{ project.image_path }}" alt="project image">
+					<div class="project-info">
+						<h2>{{ project.title }}</h2>
+						<p>{{ project.description }}</p>
+					</div>
+				</a>
+			</li>
+			{% endfor %}
+
+		</ul>
+
+		<ul class="cd-slider-navigation cd-img-replace">
+			<li><a href="#0" class="prev inactive">Prev</a></li>
+			<li><a href="#0" class="next">Next</a></li>
+		</ul> <!-- .cd-slider-navigation -->
+	</div> <!-- .cd-projects-wrapper -->
+
+	<div class="cd-project-content" ng-class="{'is-visible':isVisible == true}">
+		{% for project in site.projects %}
+		<div ng-if="project == '{{ project.title | downcase | replace: ' ', '-' }}'">
+			<h2>{{ project.title }}</h2>
+			<em>{{ project.description }}</em>
+			<p class="subheader"><i class="fa fa-clock-o"></i> {{ project.year }} &nbsp;&nbsp;//&nbsp;&nbsp; <i class="fa fa-tags"></i> {{ project.categories | join: ', ' }} &nbsp;&nbsp;//&nbsp;&nbsp; <a href="{{ project.client_path }}" target="_blank"><i class="fa fa-bolt"></i> {{ project.client }}</a></p>
+			{{ project.content }}
+			<h3>Skills:</h3>
+			<ul class="skills">
+			    {% for skill in project.skills %}
+			    <li><i class="fa fa-check-square"></i> {{ skill }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+		{% endfor %}
+		<a href="#0" class="close cd-img-replace" ng-click="close(false)">Close</a>
+	</div> <!-- .cd-project-content -->
