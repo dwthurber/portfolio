@@ -29,7 +29,7 @@ a:hover {
 }
 a.line {
   color:#fff;
-  border-bottom: 1px solid #85CC98;
+  border-bottom: 2px solid #85CC98;
 }
 a.line:hover {
   background-color: #85CC98;
