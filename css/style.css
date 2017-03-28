@@ -18,13 +18,19 @@ body {
   background-color: #ffffff;
 }
 
-a {
+a,a:hover {
   color: #85CC98;
   text-decoration: none;
+  position:relative;
+  transition:0.5s color ease;
 }
 a:hover {
     color: #fff;
 }
+a.line:hover {
+  text-decoration: underline;
+}
+
 strong {
     font-weight: bolder;
 }
