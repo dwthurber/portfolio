@@ -50,7 +50,7 @@ General Style
   width: 100%;
   /* vertically align its content */
   display: table;
-  background: url('../img/bg-11-full.jpg') center center;
+  background: url('../img/bg-9-full.jpg') center center;
   background-size: cover;
   overflow: hidden;
 }
@@ -67,14 +67,14 @@ General Style
 }
 .cd-intro-content h1 {
   font-size: 4.4rem;
-  color: #333;
+  color: #fff;
 }
 .cd-intro-content p {
   font-size: 1.7rem;
   font-weight: 700;
   line-height: 1.4;
   margin: 1em 0;
-  color: #202e4a;
+  color: #ccc;
 }
 .cd-intro-content .action-wrapper {
   display: inline-block;
